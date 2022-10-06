@@ -1,0 +1,26 @@
+.confirm_email_wrap{
+    min-height: 80vh;
+    .confirm_email_content{
+        padding: 50px 0px;
+        .confirm_email_head{
+            font-size: 26px;
+            color: #811579;
+            font-weight: 500;
+        }
+        .confirm_email_note{
+            margin: 10px 0px 20px 0px;
+            background: #fbeab796;
+            border-radius: 4px;
+            padding: 11px;
+            h6{
+                color: #816208;
+            }
+        }
+        .confirm_email_btn{
+            text-align: right;
+             a{
+                padding: 4px 10px;
+             }
+        }
+    }
+}

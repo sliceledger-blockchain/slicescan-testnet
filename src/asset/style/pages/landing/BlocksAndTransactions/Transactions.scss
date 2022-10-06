@@ -1,0 +1,136 @@
+.transactions_wrap {
+    box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+    border-radius: 0.5rem;
+
+    background: #fff;
+
+    .transactions_title {
+        border-bottom: 1px solid #e7eaf3;
+        padding: 20px 20px 10px 20px;
+
+        .h6_title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #4a4f55;
+        }
+    }
+
+    .transactions_loader{
+        padding: 20px;
+        padding-bottom: 0px;
+        height: 400px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .transactions_user_wrap {
+        padding: 20px;
+        padding-bottom: 0px;
+        height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .transactions_user {
+            display: flex;
+            align-items: center;
+
+            .transactions_user_profile {
+                color: #77838f;
+                background: rgba(119, 131, 143, 0.1);
+                border-color: transparent;
+                font-size: 14px;
+                width: 40px;
+                height: 40px;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 40px;
+                font-weight: 600;
+                margin-right: 10px;
+            }
+        }
+
+        .user_id {
+
+            p {
+                font-size: 12px;
+                margin-top: -5px;
+            }
+        }
+
+        hr {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+            opacity: .75;
+            border: 0;
+            border-top: 1px solid #e7eaf3;
+        }
+    }
+
+    .transactions_id_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .transactions_id {
+            p {
+                display: inline-block;
+                padding-right: 5px;
+                color: #1e2022;
+            }
+
+            a {
+                display: inline-block;
+            }
+
+            .transactions_time {
+                margin-top: -5px;
+            }
+        }
+
+        .slice {
+            p {
+
+
+                position: relative;
+                padding-left: 1.15rem;
+                letter-spacing: .8px;
+                border-top-right-radius: 0.25rem;
+                border-bottom-right-radius: 0.25rem;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                color: #77838f;
+                background-color: rgba(119, 131, 143, .1);
+                font-size: .65625rem;
+                line-height: 1.7;
+                padding: 4px 10px 2px 20px;
+
+                &::after {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    border-top: 0.7rem solid transparent;
+                    border-bottom: 0.7rem solid transparent;
+                    border-left: 0.7rem solid #fff;
+                }
+            }
+        }
+    }
+
+    .transactions_footer {
+        padding: 15px 10px;
+        border-top: 1px solid #e7eaf3;
+
+        .primary_btn {
+            padding: 0px 10px;
+            width: 100%;
+            font-size: 14px !important;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width:1023px){
+        margin-top: 20px;
+    }
+}

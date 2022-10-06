@@ -1,0 +1,113 @@
+.block_details {
+    min-height: 100vh;
+
+    .block_head {
+        color: #4a4f55;
+        font-size: 22px;
+        margin: 0px 0px;
+    }
+
+    hr {
+        margin: 10px 0px;
+        color: #c5c3c3;
+    }
+
+    .block_table {
+        padding: 23px;
+        background-color: white;
+
+        .table_headings {
+            background: #eaeeef;
+        }
+
+        .transaction_details {
+            color: #c50cb1;
+            font-weight: 500;
+        }
+
+        .pagination_div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+
+            .show_count {
+                // padding: 0px 0px 15px 10px;
+                color: grey;
+                text-transform: capitalize;
+                font-size: 11px;
+
+                .selectpagelimt {
+                    border-radius: 3px;
+                    border-color: #8080806e;
+                    color: grey;
+                    cursor: pointer;
+                }
+
+            }
+
+            .paginate_count {
+                padding: 0px 15px 10px 0px;
+
+                span {
+                    background: #dcefff;
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    border-radius: 3px;
+                    color: gray;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #0f91ff;
+                        color: #fff;
+                    }
+
+                }
+            }
+
+            .dots-4 {
+                height: 17px;
+                aspect-ratio: 2.5;
+                --_g: no-repeat radial-gradient(farthest-side,#9c27b0 90%,rgba(154, 20, 132, 0));
+                background:var(--_g), var(--_g), var(--_g), var(--_g);
+                background-size: 20% 50%;
+                animation:d4 1s infinite linear alternate; 
+              }
+              
+              @keyframes d4 {
+                0%,
+                5%    {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+                12.5% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+                25%   {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+                37.5% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 0   ,calc(3*100%/3) 50% }
+                50%   {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 0   }
+                62.5% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+                75%   {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+                87.5% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 100%}
+                95%,
+                100%  {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+              }
+              
+            
+        }
+    }
+
+    .block_table_loading {
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (max-width: 374px){
+    .block_details .block_table .pagination_div{
+        display: block;
+    }
+    .block_details .block_table .pagination_div .pagination{
+        margin-top: 10px;
+    }
+}

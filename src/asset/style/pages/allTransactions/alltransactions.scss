@@ -1,0 +1,97 @@
+.all_transaction_details {
+    min-height: 100vh;
+
+    .all_transaction_head {
+        color: #4a4f55;
+        font-size: 22px;
+        margin: 0px 0px;
+    }
+
+    hr {
+        margin: 10px 0px;
+        color: #c5c3c3;
+    }
+
+    .all_transaction_table {
+        padding: 23px;
+        background-color: white;
+
+        .table_headings {
+            background: #eaeeef;
+        }
+
+        .transaction_details {
+            color: #c50cb1;
+            font-weight: 500;
+        }
+
+        .pagination_div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            align-items: center;
+
+            .show_count {
+                // padding: 0px 0px 15px 10px;
+                font-size: 11px;
+                color: grey;
+                text-transform: capitalize;
+
+                .selectpagelimt {
+                    border-radius: 3px;
+                    border-color: #8080806e;
+                    color: grey;
+                    cursor: pointer;
+                }
+
+            }
+
+            .paginate_count {
+                padding: 0px 15px 10px 0px;
+
+                span {
+                    background: #dcefff;
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    border-radius: 3px;
+                    color: gray;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #0f91ff;
+                        color: #fff;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+    .all_transaction_loading {
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+.pagination {
+    --bs-pagination-padding-x: 9px;
+    --bs-pagination-padding-y: 0px;
+    --bs-pagination-font-size: 13px;
+
+}
+
+@media screen and (max-width: 374px){
+    .all_transaction_details .all_transaction_table .pagination_div {
+        display: block;
+    }
+    .all_transaction_details .all_transaction_table .pagination_div .pagination{
+        margin-top: 10px;
+    }
+}

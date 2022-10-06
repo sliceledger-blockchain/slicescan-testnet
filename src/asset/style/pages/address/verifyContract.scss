@@ -1,0 +1,20 @@
+.verify_contract_wrap{
+    min-height: 60vh;
+    .verify_contract_content{
+        padding: 10px 0px;
+        p{
+            color: #1d1e1e;
+        }
+
+        .verify_contract_address{
+            margin-top: 20px;
+            height: 250px;
+            border: 1px solid #d1d1d1;
+            border-radius: 5px;
+            padding: 5px;
+            overflow-y: auto;
+            word-break: break-all;
+            font-size: 13px;
+        }
+    }
+}

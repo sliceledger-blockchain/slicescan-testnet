@@ -1,0 +1,136 @@
+@mixin icon-class {
+    background: #ebebeb;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5e5e5e;
+}
+
+.addressOverView_section {
+    .contractAddress {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        align-items: center;
+
+        img {
+            width: 25px;
+            height: 25px;
+            border-radius: 8px;
+        }
+
+        .contract_address {
+            font-size: 20px;
+            word-break: break-all;
+            color: #464646;
+            font-weight: 500;
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .icons {
+            display: flex;
+            gap: 3px;
+            align-items: center;
+
+            .copy_icon {
+                @include icon-class;
+                cursor: pointer;
+
+                svg {
+                    padding: 1px;
+                }
+            }
+
+            .qrCode_icon {
+                @include icon-class;
+
+                svg {
+                    padding: 1px;
+                }
+            }
+        }
+    }
+
+    .contract_overview {
+        .card {
+            box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+
+            .card-header {
+                display: flex;
+                justify-content: space-between;
+                background-color: #fff;
+
+                .more_dropdown {
+                    position: relative;
+
+                    .dropdown_head {
+                        background: #f3f3f3;
+                        color: gray;
+                        font-size: 13px;
+                        border-radius: 7px;
+                        padding: 0px 5px;
+                        cursor: pointer;
+                    }
+
+                    .dropdown_menu {
+                        position: absolute;
+                        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
+                        width: 213px;
+                        padding: 20px;
+                        background: #fff;
+                        border-radius: 10px;
+                        right: 0px;
+                        top: 31px;
+                        z-index: 10;
+                    }
+                }
+
+                .title {
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #565353;
+
+                }
+            }
+
+            .card-body {
+                padding: 10px 1rem;
+
+                hr {
+                    margin: 0.5rem 0;
+                }
+
+                .token_div {
+                    .token_select_dropdown {
+                        display: flex;
+                        justify-content: space-between;
+                        border: 1px solid #d7d7d7;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                    }
+                }
+
+                .contractCreator_div {
+                    padding: 5px 0px;
+
+                    .contract_creator_address {
+                        font-size: 13px;
+
+                        .copy_address {
+                            color: #0983eb;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+    }
+}

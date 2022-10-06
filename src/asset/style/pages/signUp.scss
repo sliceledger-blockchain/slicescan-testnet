@@ -1,0 +1,38 @@
+.signUp_wrap{
+    padding: 50px 0px;
+    min-height: 80vh;
+    .signUp_form, .signUp_title{
+        position: relative;
+        // width: 50%;
+        margin: 0px auto;
+    }
+    .forgot_pass{
+        position: absolute;
+        right: 0;
+        a{
+            text-decoration: underline;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    .logIn_option{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .spinner-border{
+            color: #fff !important;
+        }
+    }
+    .captcha_wrap{
+        padding: 1.25rem 0em;
+        .captcha{
+            width: 304px;
+            margin: 0px auto;
+        }
+    }
+
+    .signUp_title{
+        margin-bottom: 20px;
+    }
+}

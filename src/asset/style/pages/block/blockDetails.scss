@@ -1,0 +1,86 @@
+.block_details {
+    min-height: 100vh;
+
+    .transaction_head {
+        color: #4a4f55;
+        font-size: 22px;
+        margin: 0px 0px;
+    }
+
+    hr {
+        margin: 10px 0px;
+        color: #c5c3c3;
+    }
+
+    .card {
+        box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+
+        .card-header {
+            background-color: #fff;
+            color: #c50cb1;
+            font-weight: 600;
+        }
+
+        .success {
+            background: #d9f7e9;
+            width: 77px;
+            text-align: center;
+            padding: 2px 0px;
+            color: #1dcf7c;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .right_side {
+
+
+            .block_bg {
+                background: #dddddd;
+                padding: 5px 10px;
+                margin-left: 10px;
+            }
+
+            a {
+                color: #c50cb1;
+            }
+        }
+
+        .showMore_div {
+            padding: 7px 0px;
+            color: #008aff;
+            cursor: pointer;
+        }
+
+        .showMore_data {
+            transition: all 5s ease-in;
+        }
+
+        .reward_data {
+            border: 1px solid #d5d5d5;
+            background: #ededed;
+            border-radius: 9px;
+            padding: 10px;
+
+            .row {
+                padding: 3px 0px;
+            }
+        }
+
+        .input_data_address {
+            border: 1px solid #d5d5d5;
+            background: #ededed;
+            border-radius: 9px;
+            padding: 10px;
+            height: 130px;
+        }
+    }
+
+    .loadingcard {
+        box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

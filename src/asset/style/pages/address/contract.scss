@@ -1,0 +1,94 @@
+.contract_wrap {
+    .contract_content {
+        padding: 20px 10px;
+
+        .contract_head {
+            font-size: 15px;
+            font-weight: 600;
+
+            span {
+                font-size: 14px;
+                font-weight: 400;
+                color: gray;
+            }
+
+            svg {
+                color: #0bcf86;
+                margin-top: -2px;
+            }
+
+            .icons {
+                color: gray;
+            }
+        }
+
+        .contract_info {
+            margin: 12px 0px 30px 0px;
+
+            hr {
+                margin: 0.7rem 0;
+            }
+        }
+
+        .contract_abi_div,
+        .contract_creation_div {
+            margin: 18px 0px 30px 0px;
+            height: 240px;
+            border: 1px solid #d1d1d1;
+            border-radius: 5px;
+            padding: 5px;
+            overflow-y: auto;
+            word-break: break-all;
+            font-size: 12px;
+            background: #fbfcff;
+        }
+
+        .deploy_bytecode_div {
+            margin: 18px 0px 30px 0px;
+            height: 100px;
+            border: 1px solid #d1d1d1;
+            border-radius: 5px;
+            padding: 5px;
+            overflow-y: auto;
+            word-break: break-all;
+            font-size: 12px;
+            background: #fbfcff;
+        }
+
+        .swarm_div {
+            margin: 18px 0px 30px 0px;
+            border: 1px solid #d1d1d1;
+            border-radius: 5px;
+            padding: 10px 10px;
+            overflow-y: auto;
+            word-break: break-all;
+            font-size: 13px;
+            background: #fbfcff;
+        }
+
+        textarea {
+            font-size: 13px;
+            background: #fbfcff;
+        }
+
+        .contract_div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                padding: 1px 6px;
+                text-align: center;
+
+                svg {
+                    margin-top: -3px;
+                    padding: 1px;
+                }
+            }
+        }
+    }
+}
+
+.tooltip {
+    font-size: 11px;
+}

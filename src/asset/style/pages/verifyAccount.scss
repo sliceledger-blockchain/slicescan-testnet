@@ -1,0 +1,29 @@
+.verify_account_wrap {
+    min-height: 80vh;
+
+    .verify_account_content {
+        padding: 50px 0px;
+
+        .verify_account_head {
+            font-size: 26px;
+            color: #811579;
+            font-weight: 600;
+        }
+
+        .verify_account_note {
+            background: #ffe9fd;
+            color: #811579;
+            padding: 11px;
+            border-radius: 4px;
+            margin: 10px 0px 25px 0px;
+        }
+
+        .verify_account_text {
+           p{
+            margin: 15px 0px;
+            color: #000000;
+            font-size: 14px;
+           }
+        }
+    }
+}

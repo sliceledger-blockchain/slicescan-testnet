@@ -1,0 +1,40 @@
+.myprofile_wrap{
+    .hero_bg{
+        padding: 50px 0px;
+        background: url(".././../image/backgraound/hero1.jpg");
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+     .myprofile_content{
+        padding: 50px 0px;
+         .myprofile_div{
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            background: #fff;
+            padding: 10px 0px;
+             .head{
+                font-size: 19px;
+    font-weight: 500;
+    padding: 0px 10px;
+             }
+             .subhead{
+                padding: 5px 10px;
+             }
+             .personal_info{
+                padding: 10px;
+                .row{
+                    padding: 10px 0px;
+                     svg{
+                        color: gray;
+                     }
+                     .username_text{
+                        font-weight: 700;
+                     }
+                }
+             }
+         }
+     }
+}

@@ -1,0 +1,87 @@
+.overView_wrap {
+    padding: 20px 0px;
+    margin-top: -70px;
+
+    .overView_card {
+        box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        background: #fff;
+
+        .overView_card_details_sec {
+            .overView_details {
+                border: none;
+                padding-bottom: 0px;
+                padding-top: 20px;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 127px;
+                    width: 1px;
+                    right: -14px;
+                    bottom: 0px;
+                    background: #e7eaf3;
+                    @media screen and (max-width:1023px){
+                        height: 0px;
+                    }
+                }
+
+              
+
+
+            }
+
+            .overView_details.last::after{
+                display: none;
+            }
+
+        }
+    }
+
+    .overView_details {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e7eaf3;
+        padding-bottom: 20px;
+
+        svg {
+            width: 28px;
+            height: 28px;
+            margin: 0rem 1.25rem;
+
+            .cls-1 {
+                fill: none;
+                stroke: #bdc5d1;
+                stroke-width: 2px;
+            }
+
+            .cls-2 {
+                fill: #c0deff;
+            }
+
+            .cls-3 {
+                fill: #3498db;
+            }
+        }
+          .logo_icon{
+                    width: 35px;
+                    margin-right: 20px;
+                    margin-left: auto;
+                }
+
+                @media screen and (max-width:1023px){
+                    border-bottom: 0px;
+                }
+    }
+
+    .overView_card_details {
+        width: 100%;
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+}

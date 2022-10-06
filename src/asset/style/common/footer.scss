@@ -1,0 +1,166 @@
+.footer_wrap {
+    padding: 20px 0px;
+    background: url("../../image/backgraound/hero1.jpg");
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .footer_btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .add_btn {
+            font-size: .65625rem;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.15rem;
+            color: #f8f9fa;
+            background: rgba(248, 249, 250, .1);
+            border-color: transparent;
+            font-weight: 600;
+            line-height: 18px;
+            transition: all 0.5s ease;
+            &:hover {
+                color: #000;
+                background: #f8f9fa;
+            }
+
+            svg {
+                width: 20px;
+                margin-right: 5px;
+
+                .st0 {
+                    fill: #E2761B;
+                    stroke: #E2761B;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st1 {
+                    fill: #E4761B;
+                    stroke: #E4761B;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st2 {
+                    fill: #D7C1B3;
+                    stroke: #D7C1B3;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st3 {
+                    fill: #233447;
+                    stroke: #233447;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st4 {
+                    fill: #CD6116;
+                    stroke: #CD6116;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st5 {
+                    fill: #E4751F;
+                    stroke: #E4751F;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st6 {
+                    fill: #F6851B;
+                    stroke: #F6851B;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st7 {
+                    fill: #C0AD9E;
+                    stroke: #C0AD9E;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st8 {
+                    fill: #161616;
+                    stroke: #161616;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .st9 {
+                    fill: #763D16;
+                    stroke: #763D16;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+            }
+        }
+
+        .status_btn {
+            font-size: .65625rem;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.15rem;
+            color: #f8f9fa;
+            background: rgba(248, 249, 250, .1);
+            border-color: transparent;
+            font-weight: 600;
+            line-height: 18px;
+            transition: all 0.5s ease;
+            &:hover {
+                color: #000;
+                background: #f8f9fa;
+            }
+
+            svg {
+                font-size: 15px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    hr {
+        margin: 1rem 0;
+        color: inherit;
+        border: 0;
+        border-top: 1px solid;
+        opacity: 1;
+        border-color: #ffffff85;
+    }
+
+    .footer_sub {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            color: #fff;
+        }
+
+        .footer_sub_btn {
+            button {
+                color: #f8f9fa;
+                background: rgba(248, 249, 250, 0.1);
+                border: none;
+                margin-left: 10px;
+                padding: 0px 0px !important;
+                height: 35px;
+                width: 35px;
+                font-size: 15px;    
+                transition: all 0.5s ease;
+
+                &:hover {
+                    border: none;
+                    color: #000;
+                    background: #f8f9fa;
+                }
+            }
+
+        }
+    }
+}

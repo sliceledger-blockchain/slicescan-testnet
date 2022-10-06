@@ -1,0 +1,59 @@
+.verifyContract_wrap {
+    min-height: 85vh;
+
+    .verify_contract_head {
+        margin-top: 25px;
+        text-align: center;
+
+        .main_head {
+            font-size: 23px;
+            color: #5a5a5a;
+        }
+
+        .sub_head {
+            font-size: 12px;
+            color: gray;
+        }
+    }
+
+    .verify_contract_main {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        img {
+            width: 320px;
+        }
+
+        .para {
+            font-size: 14px;
+            color: gray;
+        }
+    }
+
+    .verify_contract_form {
+        margin: 20px 0px;
+
+        label {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .agree_checkbox {
+            display: flex;
+            gap: 7px;
+            justify-content: center;
+        }
+
+    }
+
+    .verify_btns {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        .primary_btn {
+            padding: 7px 10px;
+        }
+    }
+}
