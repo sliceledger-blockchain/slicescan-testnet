@@ -22,7 +22,7 @@ const AllTransaction = () => {
 
                                 Web3.eth.getBlock(i)
                                     .then((result) => {
-                                  
+
                                         if (result) {
                                             if (result.transactions) {
 
@@ -35,6 +35,10 @@ const AllTransaction = () => {
 
                                                                 if (e) {
                                                                     setLatestTransactions(oldArray => [e, ...oldArray]);
+                                                                    if(e.to === null){
+                                                                        getContractAddressForEmptyTo(e.hash)
+                                                                        getContractAddressForEmptyTo1(e.hash)
+                                                                      }
                                                                 }
                                                                 Web3.eth.getBlock(e.blockNumber).then((data) => {
 
@@ -122,7 +126,39 @@ const AllTransaction = () => {
         );
     }
 
-    const [a, setA] = useState("")
+    let IndexValue = new Array();
+
+    function ContractIndexValue(ContractAddressString) {
+        IndexValue.push(ContractAddressString)
+        return IndexValue.length
+    }
+  
+    const [ContractAddNull, setContractAddNull] = useState([])
+  
+    function getContractAddressForEmptyTo(params) {
+      Web3.eth.getTransactionReceipt(params).then(e => {
+        setContractAddNull(a => [e.contractAddress, ...a])
+      })
+      return ContractAddNull
+  
+    }
+  
+    let IndexValue1 = new Array();
+  
+    function ContractIndexValue1(ContractAddressString1) {
+        IndexValue1.push(ContractAddressString1)
+        return IndexValue1.length
+    }
+  
+    const [ContractAddNull1, setContractAddNull1] = useState([])
+  
+    function getContractAddressForEmptyTo1(params) {
+      Web3.eth.getTransactionReceipt(params).then(e => {
+        setContractAddNull1(a => [e.contractAddress, ...a])
+      })
+      return ContractAddNull
+  
+    }
 
 
 
@@ -169,18 +205,7 @@ const AllTransaction = () => {
 
                                         <tbody>
                                             {currentItemsCollections.sort((a, b) => b.blockNumber - a.blockNumber).map((e, index) => {
-                                                if (e.to == null) {
-
-                                                    Web3.eth.getTransactionReceipt(e.hash)
-                                                        .then((data) => {
-
-                                                            let contractAddress = data.contractAddress
-                                                            setA(contractAddress)
-
-                                                        })
-                                                }
-
-                                                // console.log("hash", e.hash, e.to);
+                                               
                                                 return (
 
                                                     <tr key={index}>
@@ -201,19 +226,18 @@ const AllTransaction = () => {
                                                         </td>
                                                         <td>
                                                             <div className='transaction_details'>
-                                                                {(e.to !== null)
-                                                                    ? <Link to={`/address/${e.to}`}>{e.to.slice(0, 4)}...{e.to.slice(-4, e.to.length)}</Link>
-                                                                    :
-                                                                    <div>
-
-                                                                        {
-                                                                            a &&
-                                                                            <Link to={`/address/${a}`}>
-                                                                                {a.slice(0, 4)}...{a.slice(-4, a.length)}
+                                                                {
+                                                                    (e.to === null)
+                                                                        ?
+                                                                        <div>
+                                                                            <Link to={`/address/${ContractAddNull1[ContractIndexValue1(e.hash) - 1]}`} className='ContractAddress_toNull' style={{width:"80px"}}>
+                                                                                {ContractAddNull[ContractIndexValue(e.hash) - 1]}
                                                                             </Link>
-                                                                        }
-
-                                                                    </div>
+                                                                        </div>
+                                                                        :
+                                                                        <div>
+                                                                            <Link to={`/address/${e.to}`}>{e.to.slice(0, 4)}...{e.to.slice(-4, e.to.length)}</Link>
+                                                                        </div>
                                                                 }
                                                             </div>
                                                         </td>

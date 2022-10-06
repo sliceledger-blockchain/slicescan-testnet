@@ -51,6 +51,7 @@ export default function Header() {
 
     function handleResize() {
         if (window.screen.width <= 991) {
+            console.log("window.screen.width", window.screen.width);
             setHeaderShow(false)
         } else {
             setHeaderShow(true)

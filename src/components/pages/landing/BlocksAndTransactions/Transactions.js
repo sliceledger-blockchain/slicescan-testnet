@@ -28,13 +28,18 @@ const Transactions = () => {
                     if (result) {
                       if (result.transactions) {
                         if (result.transactions.length > 0) {
-                        
+
                           const lastTranasctions = result.transactions.slice(-1)
 
                           Web3.eth.getTransaction(lastTranasctions[0]).then(
                             (e) => {
                               if (e) {
+                                
                                 setLatestTransactions(oldArray => [e, ...oldArray]);
+                                if(e.to === null){
+                                  getContractAddressForEmptyTo(e.hash)
+                                  getContractAddressForEmptyTo1(e.hash)
+                                }
 
                               }
 
@@ -102,9 +107,45 @@ const Transactions = () => {
     );
   }
 
-  const [a, setA] = useState("")
 
- return (
+
+  let IndexValue = new Array();
+
+  function ContractIndexValue(ContractAddressString) {
+      IndexValue.push(ContractAddressString)
+      return IndexValue.length
+  }
+
+  const [ContractAddNull, setContractAddNull] = useState([])
+
+  function getContractAddressForEmptyTo(params) {
+    Web3.eth.getTransactionReceipt(params).then(e => {
+      setContractAddNull(a => [e.contractAddress, ...a])
+    })
+    return ContractAddNull
+
+  }
+
+  let IndexValue1 = new Array();
+
+  function ContractIndexValue1(ContractAddressString1) {
+      IndexValue1.push(ContractAddressString1)
+      return IndexValue1.length
+  }
+
+  const [ContractAddNull1, setContractAddNull1] = useState([])
+
+  function getContractAddressForEmptyTo1(params) {
+    Web3.eth.getTransactionReceipt(params).then(e => {
+      setContractAddNull1(a => [e.contractAddress, ...a])
+    })
+    return ContractAddNull
+
+  }
+
+
+
+  return (
     <>
       {latestTransactions.length > 0 ?
 
@@ -115,18 +156,8 @@ const Transactions = () => {
           <div className='transactions_user_wrap'>
 
             {latestTransactions.sort((a, b) => b.blockNumber - a.blockNumber).slice(0, 10).map((e, index) => {
-              if (e.to == null) {
-              
-                Web3.eth.getTransactionReceipt(e.hash)
-                  .then((data) => {
-
-                    let contractAddress = data.contractAddress
-                    setA(contractAddress)
-                   
-                  })
-              }
-
-              return (
+             
+            return (
                 <Row key={index}>
                   <Col sm={5} md={5} lg={5} xl={5}>
                     <div className='transactions_user'>
@@ -144,18 +175,22 @@ const Transactions = () => {
                         <p>From</p>
                         {e.from ? <Link to={`/address/${e.from}`}>{e.from.slice(0, 4)}...{e.from.slice(-4, e.from.length)}</Link> : <span>-</span>}
                         <div className='transactions_time'>
-                          <p>To </p>
-                          {(e.to !== null) ?
-                            <Link to={`/address/${e.to}`}>{e.to.slice(0, 4)}...{e.to.slice(-4, e.to.length)}</Link>
-                            :
-                            <span>
-                              {
-                                a &&
-                                <Link to={`/address/${a}`}>
-                                  {a.slice(0, 4)}...{a.slice(-4, a.length)}
-                                </Link>
-                              }
-                            </span>
+                          
+
+                          {
+                            (e.to === null)
+                              ?
+                              <div className='d-flex'>
+                                <p>To </p>
+                              <Link to= {`/address/${ContractAddNull1[ContractIndexValue1(e.hash) - 1]}`} className='ContractAddress_toNull'>
+                                {ContractAddNull[ContractIndexValue(e.hash) - 1]}
+                              </Link>
+                              </div>
+                              :
+                              <div>
+                                <p>To </p>
+                              <Link to={`/address/${e.to}`}>{e.to.slice(0, 4)}...{e.to.slice(-4, e.to.length)}</Link>
+                              </div>
                           }
                         </div>
                       </div>
